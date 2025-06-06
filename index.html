@@ -2,102 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sabarishavu Photography</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 1rem;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-    }
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem;
-    }
-    nav a.active {
-      border-bottom: 2px solid white;
-    }
-    .hero {
-      background: url('https://source.unsplash.com/1600x900/?photographer') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      color: white;
-      padding-top: 4rem;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 2rem;
-    }
-    .hero button {
-      background: white;
-      color: black;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .hero button:hover {
-      background: black;
-      color: white;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #333;
-      color: white;
-    }
-  </style>
+  <title>Sabarish Avu Photography</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
 
-  <header>
-    <nav>
-      <a href="#" class="active">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About Me</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Hi! I'm Sabarish</h1>
-    <p>I specialize in all kinds of photography including wildlife, weddings, candid moments, portraits, and nature.</p>
-    <button onclick="location.href='gallery.html'">SEE MY WORLD</button>
+  <section id="hero">
+    <h1>I'm Sabarish Avu</h1>
+    <p>Photography is more than a hobby—it’s how I explore light, emotion, and story.</p>
+    <a href="gallery.html" class="btn">View Gallery</a>
   </section>
 
-  <footer>
-    &copy; 2025 Sabarishavu Photography. All rights reserved.
-  </footer>
+  <section id="tips">
+    <h2>Photography Tips</h2>
+    <ul>
+      <li><strong>Use Natural Light</strong>: Golden hours give soft, flattering light.</li>
+      <li><strong>Keep It Simple</strong>: Remove distractions from your frame.</li>
+      <li><strong>Experiment With Angles</strong>: Change perspective for fresh shots.</li>
+      <li><strong>Edit with Care</strong>: Enhance, but stay true to reality.</li>
+      <li><strong>Practice</strong>: The best way to improve is to shoot constantly.</li>
+    </ul>
+  </section>
 
+  <section id="quotes">
+    <h2>Inspirational Quotes</h2>
+    <blockquote>“Photography is an austere and blazing poetry of the real.” — Ansel Adams</blockquote>
+    <blockquote>“Photography is a way of feeling… what you have caught on film is captured forever…” — Aaron Siskind</blockquote>
+  </section>
 </body>
 </html>
