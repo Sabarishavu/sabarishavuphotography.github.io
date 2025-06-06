@@ -1,211 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sabarishavu Photography</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     * {
       box-sizing: border-box;
     }
-
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #ffe259, #ffa751);
-      color: #333;
-      overflow-x: hidden;
     }
-
-    /* Loading Animation */
-    #loader {
+    header {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      background: white;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      z-index: 1000;
       display: flex;
       justify-content: center;
-      align-items: center;
-      z-index: 9999;
     }
-
-    .spinner {
-      border: 6px solid #ddd;
-      border-top: 6px solid #ffa751;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 1s linear infinite;
+    nav {
+      display: flex;
+      gap: 2rem;
     }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.85);
+    nav a {
       color: white;
-      padding: 2rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem;
+    }
+    nav a.active {
+      border-bottom: 2px solid white;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?photographer') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
+      color: white;
+      padding-top: 4rem;
     }
-
-    header img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 10px;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
     }
-
-    .intro {
-      text-align: center;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
+    .hero button {
+      background: white;
+      color: black;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-weight: bold;
       cursor: pointer;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
     }
-
-    .gallery img:hover {
-      transform: scale(1.05);
+    .hero button:hover {
+      background: black;
+      color: white;
     }
-
-    .contact {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.3);
-      padding: 2rem;
-    }
-
-    .social-icons a {
-      color: #333;
-      margin: 0 10px;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #000;
-    }
-
     footer {
       text-align: center;
       padding: 1rem;
-      background: rgba(0, 0, 0, 0.85);
+      background: #333;
       color: white;
     }
-
-    /* Lightbox */
-    #lightbox {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 10000;
-    }
-
-    #lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #fff;
-    }
-
-    #lightbox:target {
-      display: flex;
-    }
-
   </style>
 </head>
 <body>
 
-  <!-- Loading Spinner -->
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
-
-  <!-- Lightbox Modal -->
-  <div id="lightbox">
-    <img id="lightbox-img" src="#" alt="Zoomed Image">
-  </div>
-
   <header>
-    <!-- Optional Logo -->
-    <img src="https://via.placeholder.com/80" alt="Logo" />
-    <h1>Sabarishavu Photography</h1>
-    <p>Capturing memories with passion.</p>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Me</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <section class="intro">
-    <h2>Welcome!</h2>
-    <p>Enjoy a glimpse into my world through the lens. From street moments to nature, I love preserving life’s beauty.</p>
-  </section>
-
-  <section class="gallery">
-    <img src="https://source.unsplash.com/random/300x300?camera" alt="Photo 1" onclick="openLightbox(this.src)">
-    <img src="https://source.unsplash.com/random/300x301?landscape" alt="Photo 2" onclick="openLightbox(this.src)">
-    <img src="https://source.unsplash.com/random/300x302?portrait" alt="Photo 3" onclick="openLightbox(this.src)">
-    <img src="https://source.unsplash.com/random/300x303?street" alt="Photo 4" onclick="openLightbox(this.src)">
-    <img src="https://source.unsplash.com/random/300x304?travel" alt="Photo 5" onclick="openLightbox(this.src)">
-    <img src="https://source.unsplash.com/random/300x305?wildlife" alt="Photo 6" onclick="openLightbox(this.src)">
-  </section>
-
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-    <div class="social-icons">
-      <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
+  <section class="hero">
+    <h1>Hi! I'm Sabarish</h1>
+    <p>I specialize in all kinds of photography including wildlife, weddings, candid moments, portraits, and nature.</p>
+    <button onclick="location.href='gallery.html'">SEE MY WORLD</button>
   </section>
 
   <footer>
-    <p>&copy; 2025 Sabarishavu Photography. All rights reserved.</p>
+    &copy; 2025 Sabarishavu Photography. All rights reserved.
   </footer>
 
-  <script>
-    // Loader animation
-    window.addEventListener("load", () => {
-      document.getElementById("loader").style.display = "none";
-    });
-
-    // Lightbox
-    function openLightbox(src) {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      lightbox.style.display = "flex";
-      lightboxImg.src = src;
-    }
-
-    document.getElementById("lightbox").addEventListener("click", function () {
-      this.style.display = "none";
-    });
-  </script>
 </body>
 </html>
