@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sabarishavu Photography</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       margin: 0;
@@ -11,56 +12,95 @@
       background: linear-gradient(to right, #ffe259, #ffa751);
       color: #333;
     }
+
     header {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
       color: white;
-      padding: 1rem 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
+
     .intro {
       text-align: center;
       padding: 2rem;
       max-width: 800px;
       margin: auto;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
       padding: 2rem;
     }
+
     .gallery img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
     }
+
     .gallery img:hover {
       transform: scale(1.05);
     }
+
+    .contact {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 1rem;
+    }
+
+    .contact a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: #333;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #000;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.8);
       color: white;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Sabarishavu Photography</h1>
-    <p>Capturing moments that matter.</p>
+    <p>Capturing moments that tell your story.</p>
   </header>
 
   <section class="intro">
-    <h2>Welcome to My Portfolio</h2>
-    <p>Here you’ll find some of my favorite moments I've captured — from portraits to landscapes and everything in between. Photography is my passion, and I love telling stories through my lens.</p>
+    <h2>Welcome!</h2>
+    <p>Explore my favorite photography works — from portraits to landscapes and candid moments. I’m passionate about turning everyday moments into timeless memories.</p>
   </section>
 
   <section class="gallery">
@@ -72,8 +112,20 @@
     <img src="https://source.unsplash.com/random/300x305?travel" alt="Photography 6">
   </section>
 
+  <section class="contact">
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:sabarish.a1903@gmail.com">your-email@example.com</a></p>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/yourphonenumber" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Sabarishavu Photography. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
